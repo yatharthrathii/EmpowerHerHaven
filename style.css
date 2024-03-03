@@ -1,0 +1,696 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Futura";
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: white;
+  background-color: black;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#nav {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#nav i:hover {
+  color: rgb(169, 169, 169);
+  transition: all ease 0.4s;
+}
+
+#nav #links a:hover {
+  color: rgb(169, 169, 169);
+  transition: all ease 0.4s;
+}
+
+#nav h1 {
+  font-size: 2vw;
+  line-height: 1.8vw;
+  font-weight: bolder;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+#nav #nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#links {
+  padding: 20px;
+}
+
+#nav-part2 #links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+  margin: 0 20px;
+}
+
+#icons {
+  border-radius: 50px;
+  background-color: white;
+  padding: 10px;
+}
+
+#icons i {
+  padding: 20px;
+}
+
+#nav-part2 #icons {
+  font-size: 18px;
+  margin: 20px;
+  font-weight: 100;
+}
+
+#cursor {
+  height: 200px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.489);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+#page1 {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  padding: 0 1vw;
+  padding-top: 25vh;
+}
+
+#page1 h1 {
+  font-size: 15.8vw;
+  text-transform: uppercase;
+  line-height: 14vw;
+  letter-spacing: -5px;
+}
+
+#img-container {
+  height: 100vh;
+  width: 100%;
+  margin-top: 1vw;
+  position: relative;
+  overflow: hidden;
+}
+
+#img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.2;
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 1vw;
+}
+
+#page2 .elem {
+  height: 100%;
+  width: 31%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page2 .elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.2;
+}
+
+.elem .dets {
+  height: 50px;
+  width: 80%;
+  position: absolute;
+  background-color: black;
+  z-index: 9;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.elem .dets h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.9vw;
+  text-transform: uppercase;
+  font-size: 1vw;
+  opacity: 0;
+}
+
+.elem .dets:hover h1 {
+  opacity: 1;
+  transition: all ease 0.5s;
+}
+
+.elem #dets1 {
+  background-color: rgba(169, 169, 169, 0.5);
+}
+
+.elem #dets1:hover {
+  background-color: rgba(169, 169, 169);
+  transition: all ease 0.5s;
+}
+
+.elem #dets2 {
+  background-color: #39464398;
+}
+
+.elem #dets2:hover {
+  background-color: #394643;
+  transition: all ease 0.3s;
+}
+
+.elem #dets3 {
+  background-color: #c3aaabad;
+}
+
+.elem #dets3:hover {
+  background-color: #c3aaab;
+  transition: all ease 0.3s;
+}
+
+.page25 {
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.page25-heading {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2vw 2vw;
+}
+
+.page25-heading h1 {
+  font-size: 4.5vw;
+  letter-spacing: -5px;
+  line-height: 9vh;
+  padding: 1vw 2vw;
+}
+
+.page25-heading p {
+  font-size: 1vw;
+  align-items: end;
+  font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+  padding: 1vw 2vw;
+}
+
+#page3 {
+  min-height: 150vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#page3 .child {
+  height: 70vh;
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.child .image {
+  height: 90%;
+  width: 100%;
+}
+
+.child .image img {
+  height: 100%;
+  width: 100%;
+}
+
+.child .list {
+  height: 10%;
+  width: 100%;
+}
+
+.child .list h2 {
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+.child .list h3 {
+  margin-top: 0.7vw;
+  font-size: 0.8vw;
+  font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+  cursor: pointer;
+  font-weight: 100;
+}
+
+#page4 {
+  margin-top: 5vw;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+#page4 #lastone {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#lastone .para {
+  height: 100%;
+  width: 50%;
+  padding: 2vw 3vw;
+}
+
+#lastone .para h1 {
+  font-size: 3vw;
+}
+
+#lastone .para p {
+  font-size: 1.2vw;
+  font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+}
+
+#lastone #image {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+#image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.2;
+}
+
+#footer {
+  height: 40vh;
+  width: 100%;
+}
+
+#footer .above {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.above .contact h3 {
+  font-size: 1.2vw;
+}
+
+.above .contact a {
+  text-decoration: none;
+  color: black;
+}
+
+.above .contact1 {
+  display: flex;
+  gap: 2.5vw;
+}
+
+.above .contact1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.above .contact1 i {
+  font-size: 1.5vw;
+}
+
+#footer .middle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer .middle h1 {
+  text-transform: uppercase;
+  font-size: 2vw;
+}
+
+#footer a:hover {
+  color: rgb(169, 169, 169);
+  transition: all ease 0.4s;
+}
+
+#footer .below {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.below p {
+  font-size: 0.8vw;
+  font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+}
+
+.highlight-paragraph {
+  margin-top: 2vw;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  #cursor {
+    display: none;
+  }
+  
+  .highlight-paragraph {
+    margin-top: 1vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .highlight-paragraph span {
+    font-size: 1.2vh;
+  }
+
+  #nav {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #nav h1 {
+    font-size: 2vh;
+    line-height: 2vh;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  #nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #links {
+    padding: 20px;
+    display: none;
+  }
+
+  #nav-part2 #links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+    margin: 0 20px;
+  }
+
+  #icons {
+    border-radius: 50px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  #icons i {
+    padding: 20px;
+  }
+
+  #nav-part2 #icons {
+    font-size: 18px;
+    margin: 20px;
+    font-weight: 100;
+  }
+
+  #page1 {
+    min-height: 70vh;
+    width: 100%;
+    padding: 0 3vw;
+    padding-top: 25vh;
+  }
+
+  #page1 h1 {
+    font-size: 15.5vw;
+    letter-spacing: -3px;
+  }
+
+  #img-container {
+    height: 25vh;
+    width: 100%;
+    margin-top: 1vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+  }
+
+  #page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5vw 3vw;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #page2 .elem {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3vw;
+  }
+
+  .elem .dets {
+    height: 50px;
+    width: 70%;
+  }
+
+  .elem .dets h1 {
+    margin-top: 2.5vh;
+    font-size: 1.5vh;
+  }
+
+  .page25 {
+    height: 40vh;
+  }
+
+  .page25-heading {
+    position: absolute;
+    padding: 2vw 2vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page25-heading h1 {
+    font-size: 5vh;
+    letter-spacing: -3px;
+    text-align: center;
+    line-height: 6vh;
+    padding: 0vh 2vh;
+  }
+
+  .page25-heading p {
+    font-size: 1vw;
+    padding: 0.5vh 2vh;
+    font-size: 10px;
+    text-align: center;
+    font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+  }
+
+  #page3 {
+    margin-top: 4vh;
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+
+  #page3 .child {
+    height: 55vh;
+    width: 80vw;
+    position: relative;
+    padding: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .child .image {
+    height: 90%;
+    width: 100%;
+  }
+
+  .child .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .child .list {
+    height: 10%;
+    width: 100%;
+  }
+
+  .child .list h2 {
+    font-size: 1vh;
+    text-transform: uppercase;
+    font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+    cursor: pointer;
+  }
+
+  .child .list h3 {
+    margin-top: 0.7vh;
+    font-size: 0.9vh;
+    font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+    cursor: pointer;
+    font-weight: 100;
+    text-decoration: none;
+  }
+
+  #page4 {
+    margin-top: 10vw;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  #page4 #lastone {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #lastone .para {
+    height: 100%;
+    width: 50%;
+    padding: 2vw 3vw;
+  }
+
+  #lastone .para h1 {
+    font-size: 3vh;
+  }
+
+  #lastone .para p {
+    font-size: 1.4vh;
+    font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+  }
+
+  #footer {
+    height: 40vw;
+    width: 100%;
+  }
+
+  #footer .above {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .above .contact a {
+    font-size: 1.8vh;
+  }
+
+  .above .contact1 {
+    display: flex;
+    gap: 2.5vh;
+  }
+
+  .above .contact1 i {
+    font-size: 1.5vh;
+  }
+
+  #footer .middle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #footer .middle h1 {
+    text-transform: uppercase;
+    font-size: 2vh;
+  }
+
+  #footer .below {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .below p {
+    font-size: 0.9vh;
+    font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+  }
+}
